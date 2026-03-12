@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CloudGuard Dashboard</title>
+<style>
+
+body{
+font-family: Arial;
+background:#111;
+color:white;
+padding:30px;
+}
+
+h1{
+color:#00ffcc;
+}
+
+.alert{
+background:#222;
+padding:10px;
+margin:10px;
+border-left:5px solid red;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>☁️ CloudGuard Monitoring Dashboard</h1>
+
+<h2>Detected Alerts</h2>
+
+{% for alert in alerts %}
+
+<div class="alert">
+{{ alert }}
+</div>
+
+{% endfor %}
+
+</body>
+</html>
